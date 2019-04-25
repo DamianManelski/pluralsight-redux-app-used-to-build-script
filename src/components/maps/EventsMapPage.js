@@ -3,7 +3,7 @@ import GoogleMapReact from "google-map-react";
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-class MapPage extends Component {
+class EventsMapPage extends Component {
   render() {
     return (
       // Important! Always set the container height explicitly
@@ -13,19 +13,23 @@ class MapPage extends Component {
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
-          <AnyReactComponent lat={59.955413} lng={30.337844} text="My Marker" />
+          <AnyReactComponent
+            lat={54.3610063}
+            lng={18.5499461}
+            text="My Marker"
+          />
         </GoogleMapReact>
       </div>
     );
   }
 }
 
-MapPage.defaultProps = {
+EventsMapPage.defaultProps = {
   center: {
-    lat: 59.95,
-    lng: 30.33
+    lat: 54.3610063,
+    lng: 18.5499461
   },
-  zoom: 11
+  zoom: 3
 };
 
-export default MapPage;
+export default EventsMapPage;
